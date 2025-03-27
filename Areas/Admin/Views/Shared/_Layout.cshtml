@@ -8,16 +8,16 @@
     <meta name="description" content="nozha admin panel fully support rtl with complete dark mode css to use. ">
     <meta name=”robots” content="index, follow">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="apple-touch-icon" sizes="180x180" href="/images/Logo.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/images/Logo.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/images/Logo.png">
-    <link rel="manifest" href="./images/favicon/site.webmanifest">
-    <link rel="mask-icon" href="./images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link  rel="apple-touch-icon" sizes="180x180" href="~/images/Logo.png">
+    <link  rel="icon" type="image/png" sizes="32x32" href="~/images/Logo.png">
+    <link  rel="icon" type="image/png" sizes="16x16" href="~/images/Logo.png">
+    <link asp-append-version="true" rel="manifest" href="~/images/Logo.png">
+    <link asp-append-version="true" rel="mask-icon" href="~/images/Logo.png" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#2b5797">
     <meta name="theme-color" content="#ffffff">
     <!-- Place favicon.ico in the root directory -->
-    <link rel="stylesheet" href="css/normalize.css">
-    <link href="./css/fontawsome/all.min.css" rel="stylesheet">
+    <link asp-append-version="true" rel="stylesheet" href="~/css/normalize.css">
+    <link asp-append-version="true" href="~/css/fontawsome/all.min.css" rel="stylesheet">
     <link rel="stylesheet"
           href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css"
           integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
@@ -27,7 +27,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet" />
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <link rel="stylesheet" href="css/main.css">
+    <link asp-append-version="true" rel="stylesheet" href="~/css/main.css">
 </head>
 
 <body class="rtl persianumber dark">
@@ -38,12 +38,12 @@
                 <button class="navbar-toggler animate__animated animate__wobble animate__delay-2s" type="button"
                         data-toggle="drawer" data-target="#dw-s1">
                     <span class="navbar-toggler-icon"></span>
-                    <!-- <i class="material-Animation">menu</i> -->
+                    
                 </button>
                 <ul class="nav navbar-nav p-0">
                     <li class="nav-item">
                         <div class="dropdown">
-                            <button class="btn  dropdown-toggle  m-0" type="button" id="dropdownMenu2"
+                            <button  class="btn  dropdown-toggle  m-0" type="button" id="dropdownMenu2"
                                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="far fa-envelope fa-lg"></i><span class="badge badge-pill badge-danger animate__animated animate__flash animate__repeat-3 animate__slower animate__delay-2s">5</span>
                             </button>
@@ -100,7 +100,7 @@
                         </div>
                     </li>
                     <li class="nav-item">
-                        <img src="./images/user-profile.jpg" alt="..."
+                        <img src="~/images/user-profile.jpg" alt="..."
                              class="rounded-circle screen-user-profile">
                     </li>
                     <li class="nav-item">
@@ -139,15 +139,11 @@
             <div class="container-fluid side-bar-container ">
                 <header class="pb-0">
                     <a class="navbar-brand  pr-5">
-                        <img class="rounded-circle" src="images/Logo.png" width="80px" height="80px">
+                        <img class="rounded-circle" src="~/images/Logo.png" width="80px" height="80px">
                     </a>
                 </header>
                 <p class="side-comment  fnt-mxs">گشت</p>
-                <li class="side a-collapse short m-2 pr-1 pl-1">
-                    <a href="./fa.html" class="side-item selected c-dark ">
-                        <i class="fas fa-language  mr-1"></i>فارسی <span class="badge badge-pill badge-success">جدید</span>
-                    </a>
-                </li>
+               
                 <ul class="side a-collapse short ">
                     <a class="ul-text  fnt-mxs">
                         <i class="fas fa-tachometer-alt mr-1"></i> صفحه
@@ -167,24 +163,10 @@
             </div>
             </ul>
 
-            <ul class="side a-collapse short">
-                <a class="ul-text  fnt-mxs">
-                    <i class="fas fa-cog mr-1"></i> شخصی سازی
-                    <!-- <span	class="badge badge-success">4</span> -->
-                    <i class="fas fas fa-chevron-down arrow"></i>
-                </a>
-                <div class="side-item-container hide animated">
-                <li class="side-item"><a href="./color.html" class="fnt-mxs"><i class="fas fa-angle-right mr-2"></i>رنگ</a></li>
-                <li class="side-item"><a href="./typo.html" class="fnt-mxs"><i class="fas fa-angle-right mr-2"></i>تایپوکرافی</a></li>
-                <li class="side-item"><a href="./dark-mode.html" class="fnt-mxs"><i class="fas fa-angle-right mr-2"></i>حالت شب</a></li>
-                <li class="side-item"><a href="./rtl.html" class="fnt-mxs"><i class="fas fa-angle-right mr-2"></i>راست چین</a></li>
-                <li class="side-item"><a href="./sidebar.html" class="fnt-mxs"><i class="fas fa-angle-right mr-2"></i>ساید بار</a></li>
-        </div>
-        </ul>
-        <p class="side-comment  fnt-mxs">عناصر</p>
-        <li class="side a-collapse short ">
-            <a href="./animation.html" class="side-item "><i class="fas fa-fan fa-spin mr-1"></i>انیمشین</a>
-        </li>
+                <p class="side-comment  fnt-mxs">سالن</p>
+                <li class="side a-collapse short ">
+	                <a asp-area="Admin" asp-controller="Service" asp-action="Create" class="side-item "><i class="fas fa-cog fa-spin mr-1"></i>خدمات</a>
+                </li>
         <li class="side a-collapse short ">
             <a  href="./Icon.html" class="side-item "><i class="fas fa-icons  mr-1"></i>آیکون</a>
         </li>
@@ -259,11 +241,11 @@
  
 
 
-    <script src="js/vendor/modernizr.js"></script>
+    <script src="~/js/vendor/modernizr.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"
             integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script>
-        window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')
+        window.jQuery || document.write('<script src="/js/vendor/jquery-3.2.1.min.js"><\/script>')
     </script>
     <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js"
             integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous">
@@ -273,7 +255,7 @@
             integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous">
     </script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-    <script src="./js/persianumber.min.js"></script>
+    <script src="~/js/persianumber.min.js"></script>
     <script>
         $(document).ready(function () {
             $('body').bootstrapMaterialDesign();
@@ -292,8 +274,11 @@
             }
         }(document, 'script', 'weatherwidget-io-js');
     </script>
-    <script src="js/main.js"></script>
-
+    <script src="~/js/main.js"></script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
 </body>
 
 </html>
