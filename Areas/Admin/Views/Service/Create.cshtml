@@ -1,1 +1,66 @@
-﻿hi
+﻿@model Domain.Models.ViewModels.ServiceVm
+<div class="container-fluid ">
+
+	<!-- content -->
+
+	<div class="row">
+		<div class="page-header breadcrumb-header p-3 mr-2 ml-2 m-2">
+			<div class="row align-items-end ">
+				<div class="col-lg-8">
+					<div class="page-header-title text-left-rtl">
+						<div class="d-inline">
+							<h3 class="lite-text ">ساخت خدمات</h3>
+						 
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4">
+					<ol class="breadcrumb float-sm-right">
+						<li class="breadcrumb-item "><a href="#"><i class="fas fa-home"></i></a></li>
+						<li class="breadcrumb-item "><a href="#">Component</a></li>
+						<li class="breadcrumb-item active">Input</li>
+					</ol>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<form class="">
+		<div class="col-8">
+			<label asp-for="Services.ServiceName" class="sr-only" for="inlineFormInput"> </label>
+			<input asp-for="Services.ServiceName" type="text" class="form-control " id="inlineFormInput" />
+			<span asp-validation-for="Services.ServiceName" class="text-danger"></span>
+
+		</div>
+		<div class="col-8">
+			<label asp-for="Services.Price" class="sr-only" for="inlineFormInput"> </label>
+			<input asp-for="Services.Price" type="text" class="form-control " id="inlineFormInput" placeholder="Jane Doe">
+			<span asp-validation-for="Services.Price" class="text-danger"></span>
+
+		</div>	
+		<div class="col-8">
+			<label asp-for="Services.Duration" class="sr-only" for="inlineFormInput"> </label>
+			<input asp-for="Services.Duration" type="text" class="form-control " id="inlineFormInput"  placeholder="Jane Doe">
+			<span asp-validation-for="Services.Duration" class="text-danger"></span>
+
+		</div>
+
+		<div class="form-group col-8">
+			<label asp-for="Services.CategoryId" for="exampleFormControlSelect1"></label>
+			<select asp-for="Services.CategoryId" asp-items="@Model.CategoryList" class="form-control" id="exampleFormControlSelect1">
+				<option disabled selected>دسته بندی</option>
+				 
+			</select>
+		</div>
+
+		<div class="form-group col-8">
+			<label asp-for="Services.Description" for="exampleFormControlTextarea1">Example textarea</label>
+			<textarea asp-for="Services.Description" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+			<span asp-validation-for="Services.Description" class="text-danger"></span>
+
+		</div>
+	</form>
+
+	<!-- end of form -->
+</div>

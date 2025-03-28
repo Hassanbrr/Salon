@@ -165,7 +165,7 @@
 
                 <p class="side-comment  fnt-mxs">سالن</p>
                 <li class="side a-collapse short ">
-	                <a asp-area="Admin" asp-controller="Service" asp-action="Create" class="side-item "><i class="fas fa-cog fa-spin mr-1"></i>خدمات</a>
+	                <a asp-area="Admin" asp-controller="Service" asp-action="Index" class="side-item "><i class="fas fa-cog fa-spin mr-1"></i>خدمات</a>
                 </li>
         <li class="side a-collapse short ">
             <a  href="./Icon.html" class="side-item "><i class="fas fa-icons  mr-1"></i>آیکون</a>
@@ -275,10 +275,8 @@
         }(document, 'script', 'weatherwidget-io-js');
     </script>
     <script src="~/js/main.js"></script>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
-</body>
+
+    </body>
 
 </html>

@@ -17,7 +17,7 @@ namespace Salon.Areas.Admin.Controllers
         }
         public IActionResult Index()
         {
-            var servicesList = _unitOfWork.Service.FindAll(includeProperties: "").ToList();
+            var servicesList = _unitOfWork.Service.FindAll(includeProperties: "Category").ToList();
             return View(servicesList);
         }
 
