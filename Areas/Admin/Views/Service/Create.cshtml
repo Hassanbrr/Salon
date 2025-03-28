@@ -27,66 +27,59 @@
 
 
 
-	@* 	<div class="col-8"> *@
-
-	@* 	</div>	 *@
-	@* 	<div class="col-8"> *@
 
 
-	@* 	</div> *@
+	<form method="post" action="" class="d-flex" enctype="multipart/form-data">
+		<div class="col-lg-10 col-sm-10 ">
 
-	@* 	<div class="form-group col-8"> *@
+			<div class="mb-3 col-lg-10 col-md-8 col-sm-8">
+				<label asp-for="Services.ServiceName" class=""> </label>
+				<input asp-for="Services.ServiceName" type="text" class="form-control " />
+				<span asp-validation-for="Services.ServiceName" class="text-danger"></span>
 
-	@* 	</div>
-
-	@* 	<div class="form-group col-8"> *@
-	@* 		<label asp-for="Services.Description" for="exampleFormControlTextarea1">Example textarea</label> *@
-	@* 		<textarea asp-for="Services.Description" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea> *@
-	@* 		<span asp-validation-for="Services.Description" class="text-danger"></span> *@
-
-	@* 	</div> *@
-	@* </form> *@
-
-	<form method="post" action="">
-
-		<div class="mb-3 col-lg-8 col-sm-10">
-			<label asp-for="Services.ServiceName" class=""> </label>
-			<input asp-for="Services.ServiceName" type="text" class="form-control " />
-			<span asp-validation-for="Services.ServiceName" class="text-danger"></span>
-
-		</div>
-		<div class="mb-3 col-lg-8 col-sm-10">
-			<label asp-for="Services.Price"> </label>
-			<input asp-for="Services.Price" type="text" class="form-control " placeholder="Jane Doe">
-			<span asp-validation-for="Services.Price" class="text-danger"></span>
-
-		</div>
-		<div class="mb-3 col-lg-8 col-sm-10">
-			<label asp-for="Services.Duration"> </label>
-			<input asp-for="Services.Duration" type="text" class="form-control " placeholder="Jane Doe">
-			<span asp-validation-for="Services.Duration" class="text-danger"></span>
-
-		</div>
-		<div class="mb-3 col-lg-8 col-sm-10">
-			<label asp-for="Services.CategoryId" for="exampleFormControlSelect1"></label>
-			<select asp-for="Services.CategoryId" asp-items="@Model.CategoryList" class="form-control" id="exampleFormControlSelect1">
-				<option disabled selected>دسته بندی</option>
-			</select>
-		</div>
-
-		<div class="row">
-			<div class="col-4">
-				<button type="submit" class="btn outlined o-primary form-control  text-center">
-				اضافه کردن
-				</button>
 			</div>
-			<div class="col-4 ">
-				<a asp-area="Admin" asp-controller="Service" asp-action="Index" class="btn outlined o-danger form-control text-center">
-					برگشت 
-				</a>
+			<div class="mb-3 col-lg-10 col-md-8 col-sm-8">
+				<label asp-for="Services.Price"> </label>
+				<input asp-for="Services.Price" type="text" class="form-control " placeholder="Jane Doe">
+				<span asp-validation-for="Services.Price" class="text-danger"></span>
+
+			</div>
+			<div class="mb-3 col-lg-10 col-md-8 col-sm-8">
+				<label asp-for="Services.Duration"> </label>
+				<input asp-for="Services.Duration" type="text" class="form-control " placeholder="Jane Doe">
+				<span asp-validation-for="Services.Duration" class="text-danger"></span>
+
+			</div>
+			<div class="mb-3 col-lg-10 col-md-8 col-sm-8">
+				<label asp-for="Services.CategoryId" for="exampleFormControlSelect1"></label>
+				<select asp-for="Services.CategoryId" asp-items="@Model.CategoryList" class="form-control" id="exampleFormControlSelect1">
+					<option disabled selected>دسته بندی</option>
+				</select>
+			</div>
+
+			<div class="mb-3 col-lg-10 col-md-8 col-sm-8 ">
+				<label asp-for="Services.ImageUrl" class="p-0"></label>
+				<input type="file" name="file" class="form-control" />
+				<span asp-validation-for="Services.ImageUrl" class="text-info"></span>
+
+			</div>
+
+			<div class="row">
+				<div class="col-4">
+					<a asp-area="Admin" asp-controller="Service" asp-action="Create" type="submit" class="btn outlined o-primary form-control  text-center">
+						اضافه کردن
+					</a>
+				</div>
+				<div class="col-4 ">
+					<a asp-area="Admin" asp-controller="Service" asp-action="Index" class="btn outlined o-danger form-control text-center">
+						برگشت
+					</a>
+				</div>
 			</div>
 		</div>
-
+		<div clas="col-2">
+			<img alt="Profile Image" src="@Model.Services.ImageUrl"     />
+		</div>
 
 	</form>
 	<!-- end of form -->
