@@ -10,15 +10,15 @@
 					<div class="page-header-title text-left-rtl">
 						<div class="d-inline">
 							<h3 class="lite-text ">ساخت خدمات</h3>
-						 
+
 						</div>
 					</div>
 				</div>
 				<div class="col-lg-4">
 					<ol class="breadcrumb float-sm-right">
 						<li class="breadcrumb-item "><a href="#"><i class="fas fa-home"></i></a></li>
-						<li class="breadcrumb-item "><a href="#">Component</a></li>
-						<li class="breadcrumb-item active">Input</li>
+						<li class="breadcrumb-item "><a asp-area="Admin" asp-controller="Service" asp-action="Index">خدمات</a></li>
+						<li class="breadcrumb-item active">ساخت خدمات</li>
 					</ol>
 				</div>
 			</div>
@@ -26,41 +26,68 @@
 	</div>
 
 
-	<form class="">
-		<div class="col-8">
-			<label asp-for="Services.ServiceName" class="sr-only" for="inlineFormInput"> </label>
-			<input asp-for="Services.ServiceName" type="text" class="form-control " id="inlineFormInput" />
+
+	@* 	<div class="col-8"> *@
+
+	@* 	</div>	 *@
+	@* 	<div class="col-8"> *@
+
+
+	@* 	</div> *@
+
+	@* 	<div class="form-group col-8"> *@
+
+	@* 	</div>
+
+	@* 	<div class="form-group col-8"> *@
+	@* 		<label asp-for="Services.Description" for="exampleFormControlTextarea1">Example textarea</label> *@
+	@* 		<textarea asp-for="Services.Description" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea> *@
+	@* 		<span asp-validation-for="Services.Description" class="text-danger"></span> *@
+
+	@* 	</div> *@
+	@* </form> *@
+
+	<form method="post" action="">
+
+		<div class="mb-3 col-lg-8 col-sm-10">
+			<label asp-for="Services.ServiceName" class=""> </label>
+			<input asp-for="Services.ServiceName" type="text" class="form-control " />
 			<span asp-validation-for="Services.ServiceName" class="text-danger"></span>
 
 		</div>
-		<div class="col-8">
-			<label asp-for="Services.Price" class="sr-only" for="inlineFormInput"> </label>
-			<input asp-for="Services.Price" type="text" class="form-control " id="inlineFormInput" placeholder="Jane Doe">
+		<div class="mb-3 col-lg-8 col-sm-10">
+			<label asp-for="Services.Price"> </label>
+			<input asp-for="Services.Price" type="text" class="form-control " placeholder="Jane Doe">
 			<span asp-validation-for="Services.Price" class="text-danger"></span>
 
-		</div>	
-		<div class="col-8">
-			<label asp-for="Services.Duration" class="sr-only" for="inlineFormInput"> </label>
-			<input asp-for="Services.Duration" type="text" class="form-control " id="inlineFormInput"  placeholder="Jane Doe">
+		</div>
+		<div class="mb-3 col-lg-8 col-sm-10">
+			<label asp-for="Services.Duration"> </label>
+			<input asp-for="Services.Duration" type="text" class="form-control " placeholder="Jane Doe">
 			<span asp-validation-for="Services.Duration" class="text-danger"></span>
 
 		</div>
-
-		<div class="form-group col-8">
+		<div class="mb-3 col-lg-8 col-sm-10">
 			<label asp-for="Services.CategoryId" for="exampleFormControlSelect1"></label>
 			<select asp-for="Services.CategoryId" asp-items="@Model.CategoryList" class="form-control" id="exampleFormControlSelect1">
 				<option disabled selected>دسته بندی</option>
-				 
 			</select>
 		</div>
 
-		<div class="form-group col-8">
-			<label asp-for="Services.Description" for="exampleFormControlTextarea1">Example textarea</label>
-			<textarea asp-for="Services.Description" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-			<span asp-validation-for="Services.Description" class="text-danger"></span>
-
+		<div class="row">
+			<div class="col-4">
+				<button type="submit" class="btn outlined o-primary form-control  text-center">
+				اضافه کردن
+				</button>
+			</div>
+			<div class="col-4 ">
+				<a asp-area="Admin" asp-controller="Service" asp-action="Index" class="btn outlined o-danger form-control text-center">
+					برگشت 
+				</a>
+			</div>
 		</div>
-	</form>
 
+
+	</form>
 	<!-- end of form -->
 </div>
