@@ -51,6 +51,11 @@
 
 			</div>
 			<div class="mb-3 col-lg-10 col-md-8 col-sm-8">
+				<label asp-for="Services.Slug"> </label>
+				<input asp-for="Services.Slug" type="text" class="form-control " placeholder="Jane Doe">
+				<span asp-validation-for="Services.Slug" class="text-danger"></span> 
+			</div>
+			<div class="mb-3 col-lg-10 col-md-8 col-sm-8">
 				<label asp-for="Services.CategoryId" for="exampleFormControlSelect1"></label>
 				<select asp-for="Services.CategoryId" asp-items="@Model.CategoryList" class="form-control" id="exampleFormControlSelect1">
 					<option disabled selected>دسته بندی</option>
@@ -64,11 +69,17 @@
 
 			</div>
 
+			<div class="mb-3 col-lg-10 col-md-8 col-sm-8 ">
+				<label asp-for="Services.Description" for="exampleFormControlTextarea1">Example textarea</label>
+				<textarea asp-for="Services.Description" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+				<span asp-validation-for="Services.Description" class="text-info"></span>
+
+			</div>
 			<div class="row">
 				<div class="col-4">
-					<a asp-area="Admin" asp-controller="Service" asp-action="Create" type="submit" class="btn outlined o-primary form-control  text-center">
+					<button   type="submit" class="btn outlined o-primary form-control  text-center">
 						اضافه کردن
-					</a>
+					</button>
 				</div>
 				<div class="col-4 ">
 					<a asp-area="Admin" asp-controller="Service" asp-action="Index" class="btn outlined o-danger form-control text-center">

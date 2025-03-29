@@ -3,7 +3,7 @@
 	<div class="card shade h-100">
 		<div class="card-body">
 
-			<h5 class="card-title">اطلاعات در قالب جدول</h5>
+			<h5 class="card-title">لیست خدمات </h5>
 
 
 			<hr>
@@ -17,7 +17,7 @@
 						<th scope="col">دسته بندی</th>
 						<th scope="col"> عکس</th>
 						<th scope="col">
-							<a asp-area="Admin" asp-controller="Service" asp-action="Create" class="btn outlined o-primary form-control  text-center">اضافه کردن</a>
+							<a asp-area="Admin" asp-controller="Service" asp-action="Upsert" class="btn outlined o-primary form-control  text-center">اضافه کردن</a>
 
 						</th>
 
@@ -42,7 +42,9 @@
 									<p>دسته‌بندی موجود نیست</p>
 								}
 							</td>
-							<td>@service.ImageUrl</td>
+							<td>
+								<img src="@service.ImageUrl" width="80px" height="80px"/>
+							</td>
 
 						</tr>
 

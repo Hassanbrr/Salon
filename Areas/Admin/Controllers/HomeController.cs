@@ -19,20 +19,20 @@ namespace Salon.Areas.Admin.Controllers
         {
             return View();
         }
-        public IActionResult Create()
-        {
-            ServiceVm serviceList = new()
-            {
+        //public IActionResult Create()
+        //{
+        //    ServiceVm serviceList = new()
+        //    {
 
-                CategoryList = _unitOfWork.Category.FindAll().Select(u => new SelectListItem
-                {
-                    Text = u.CategoryName,
-                    Value = u.CategoryId.ToString()
-                }),
-                Services = new Service()
-            };
+        //        CategoryList = _unitOfWork.Category.FindAll().Select(u => new SelectListItem
+        //        {
+        //            Text = u.CategoryName,
+        //            Value = u.CategoryId.ToString()
+        //        }),
+        //        Services = new Service()
+        //    };
 
-            return View(serviceList);
-        }
+        //    return View(serviceList);
+        //}
     }
 }
