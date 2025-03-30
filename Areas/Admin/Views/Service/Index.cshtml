@@ -1,15 +1,36 @@
 ﻿@model List<Service>
-<div class=" p-2">
+
+<div class="col-xs-1 col-sm-1 col-md-8 col-lg-8 p-2">
+	<div class="row">
+		<div class="page-header breadcrumb-header p-3 mr-2 ml-2 m-2">
+			<div class="row align-items-end ">
+				<div class="col-lg-8">
+					<div class="page-header-title text-left-rtl">
+						<div class="d-inline"> 
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4">
+					<ol class="breadcrumb float-sm-right">
+						<li class="breadcrumb-item "><a href="#"><i class="fas fa-home"></i></a></li>
+						<li class="breadcrumb-item active">خدمات </li>
+						 
+					</ol>
+				</div>
+			</div>
+		</div>
+	</div>
+
 	<div class="card shade h-100">
-		<div class="card-body " >
+		<div class="card-body">
 
-			<h5 class="card-title">لیست خدمات </h5>
-
-
-			<hr>
-
-			<table class="table table-striped m-1" style="overflow: auto; max-height: 100px;">
-					<thead>
+			<div class="d-flex justify-content-around"> 
+				<h5 class="card-title">لیست خدمات </h5>
+				<a asp-area="Admin" asp-controller="Service" asp-action="Upsert" class="btn o-primary  text-center">اضافه کردن</a>
+			</div> 
+			<hr> 
+			<table class="table table-striped m-1 table-responsive" style=" overflow: auto; max-height:100% ; max-width:100%;">
+				<thead>
 					<tr>
 						<th scope="col">ردیف</th>
 						<th scope="col">نام </th>
@@ -17,67 +38,51 @@
 						<th scope="col">مذت زمان</th>
 						<th scope="col">اسلاگ</th>
 						<th scope="col">دسته بندی</th>
-						<th scope="col">توضیحات</th>
-
+						<th scope="col">توضیحات</th> 
 						<th scope="col"> عکس</th>
 						<th scope="col">
-							<a asp-area="Admin" asp-controller="Service" asp-action="Upsert" class="btn o-primary  text-center">اضافه کردن</a>
+							تنظیمات
 
 						</th>
 
 					</tr>
-					</thead>
-					<tbody>
-				 
-						@foreach (var service in Model)
-						{
-							<tr>
-								<th scope="row">@service.CategoryId</th>
-								<td>@service.ServiceName</td>
-								<td>@service.Price</td>
+				</thead>
+				<tbody>
 
-								<td>@service.Duration</td>
-								<td>@service.Slug</td>
-
-								<td>
-									@if (service.Category != null)
-									{
-										<p>@service.Category.CategoryName</p>
-									}
-									else
-									{
-										<p>دسته‌بندی موجود نیست</p>
-									}
+					@foreach (var service in Model)
+					{
+						<tr>
+							<td>@for (int i = 1; i <= Model.Count(); i++)
+							    {
+									
+							    }
 								</td>
-								<td>@service.Description</td>
+									<td>@service.ServiceName</td>
+							<td>@service.Price</td> 
+							<td>@service.Duration</td>
+							<td>@service.Slug</td> 
+							<td>
+								@if (service.Category != null) { <p>@service.Category.CategoryName</p> }
+								else { <p>دسته‌بندی موجود نیست</p> }
+							</td>
+							<td>@service.Description</td> 
+							<td>
+								<img src="@service.ImageUrl" width="80px" height="80px" />
+							</td>
+							<td>
 
-								<td>
-									<img src="@service.ImageUrl" width="80px" height="80px" />
-								</td>
-								<td>
-
-									<div class="w-100 btn-group" role="group">
-										<a asp-area="Admin" asp-controller="Service" asp-action="Upsert" asp-route-id="@service.ServiceId" class="btn outlined c-warning mx-2">
-											<i class="bi bi-pencil-square"></i>ویرایش
-
-										</a>
-									<a asp-area="Admin" asp-controller="Service" asp-action="Delete"   asp-route-id="@service.ServiceId"   class="btn outlined c-danger mx-2">
-											<i class="bi bi-trash3-fill"></i>حذف
-
-										</a>
-										
-
-
-
-									</div>
-								</td>
-							</tr>
-
-						}
-				 
-
-					</tbody>
-				</table>
+								<a asp-area="Admin" asp-controller="Service" asp-action="Upsert" asp-route-id="@service.ServiceId" class="btn outlined c-warning mx-2 px-4 rounded">
+										<i class="bi bi-pencil-square"></i>ویرایش 
+									</a>
+									<a asp-area="Admin" asp-controller="Service" asp-action="Delete" asp-route-id="@service.ServiceId" class="btn outlined c-danger mx-2 px-4 rounded">
+										<i class="bi bi-trash3-fill"></i>حذف 
+									</a> 
+							 
+							</td>
+						</tr>  
+					} 
+				</tbody>
+			</table>
 		</div>
 
 	</div>

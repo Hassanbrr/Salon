@@ -8,9 +8,9 @@
     <meta name="description" content="nozha admin panel fully support rtl with complete dark mode css to use. ">
     <meta name=”robots” content="index, follow">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link  rel="apple-touch-icon" sizes="180x180" href="~/images/Logo.png">
-    <link  rel="icon" type="image/png" sizes="32x32" href="~/images/Logo.png">
-    <link  rel="icon" type="image/png" sizes="16x16" href="~/images/Logo.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="~/images/Logo.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="~/images/Logo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="~/images/Logo.png">
     <link asp-append-version="true" rel="manifest" href="~/images/Logo.png">
     <link asp-append-version="true" rel="mask-icon" href="~/images/Logo.png" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#2b5797">
@@ -23,13 +23,9 @@
           integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
-
           integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet" />
-    <!-- CSS -->
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css">
 
-  
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link asp-append-version="true" rel="stylesheet" href="~/css/main.css">
 </head>
@@ -42,12 +38,12 @@
                 <button class="navbar-toggler animate__animated animate__wobble animate__delay-2s" type="button"
                         data-toggle="drawer" data-target="#dw-s1">
                     <span class="navbar-toggler-icon"></span>
-                    
+
                 </button>
                 <ul class="nav navbar-nav p-0">
                     <li class="nav-item">
                         <div class="dropdown">
-                            <button  class="btn  dropdown-toggle  m-0" type="button" id="dropdownMenu2"
+                            <button class="btn  dropdown-toggle  m-0" type="button" id="dropdownMenu2"
                                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="far fa-envelope fa-lg"></i><span class="badge badge-pill badge-danger animate__animated animate__flash animate__repeat-3 animate__slower animate__delay-2s">5</span>
                             </button>
@@ -147,92 +143,62 @@
                     </a>
                 </header>
                 <p class="side-comment  fnt-mxs">گشت</p>
-               
+
                 <ul class="side a-collapse short ">
-                    <a class="ul-text  fnt-mxs">
-                        <i class="fas fa-tachometer-alt mr-1"></i> صفحه
-                        <!-- <span class="badge badge-info">4</span> -->
-                        <i class="fas fa-chevron-down arrow"></i>
-                    </a>
-                    <div class="side-item-container hide animated">
-                    <li class="side-item ">
-                        <a href="./" class="fnt-mxs"><i class="fas fa-angle-right mr-2"></i>پنل کاربری</a>
-                    </li>
-                    <li class="side-item">
-                        <a href="./dark.html" class="fnt-mxs"><i class="fas fa-angle-right mr-2"></i>پنل کاربری تاریک</a>
-                    </li>
-                    <li class="side-item"><a href="./Login.html" class="fnt-mxs"><i class="fas fa-angle-right mr-2"></i>صفحه ورود</a></li>
-                    <li class="side-item"><a href="./glogin.html"><i class="fas fa-angle-right mr-2"></i>صفحه ورود رنگی</a></li>
+	                <a class="ul-text  fnt-mxs">
+		                <i class="fas fa-tachometer-alt mr-1"></i> صفحه
+		                <!-- <span class="badge badge-info">4</span> -->
+		                <i class="fas fa-chevron-down arrow"></i>
+	                </a>
+	                <div class="side-item-container hide animated">
+		                <li class="side-item ">
+			                <a href="./" class="fnt-mxs"><i class="fas fa-angle-right mr-2"></i>پنل کاربری</a>
+		                </li>
+		                <li class="side-item">
+			                <a href="./dark.html" class="fnt-mxs"><i class="fas fa-angle-right mr-2"></i>پنل کاربری تاریک</a>
+		                </li>
+		                <li class="side-item"><a href="./Login.html" class="fnt-mxs"><i class="fas fa-angle-right mr-2"></i>صفحه ورود</a></li>
+		                <li class="side-item"><a href="./glogin.html"><i class="fas fa-angle-right mr-2"></i>صفحه ورود رنگی</a></li>
 
-            </div>
-            </ul>
+	                </div>
+                </ul>
+				
+                <ul class="side a-collapse short ">
+	                <a class="ul-text  fnt-mxs">
+		                <i class="fas fa-tachometer-alt mr-1"></i> سالن
+		                <!-- <span class="badge badge-info">4</span> -->
+		                <i class="fas fa-chevron-down arrow"></i>
+	                </a>
+	                <div class="side-item-container hide animated">
+		                <li class="side-item ">
+			                <a asp-area="Admin" asp-controller="Service" asp-action="Index" class="side-item "><i class="fas fa-cog fa-spin mr-1"></i>خدمات</a>
 
-                <p class="side-comment  fnt-mxs">سالن</p>
-                <li class="side a-collapse short ">
-	                <a asp-area="Admin" asp-controller="Service" asp-action="Index" class="side-item "><i class="fas fa-cog fa-spin mr-1"></i>خدمات</a>
-                </li>
-        <li class="side a-collapse short ">
-            <a  href="./Icon.html" class="side-item "><i class="fas fa-icons  mr-1"></i>آیکون</a>
-        </li>
+		                </li>
+		                <li class="side-item">
+			                <a asp-area="Admin" asp-controller="Category" asp-action="Index" class="side-item "><i class="fas fa-cog fa-spin mr-1"></i> دسته بندی </a>
 
-        <ul class="side a-collapse short ">
-            <a class="ul-text  fnt-mxs">
-                <i class="fas fa-cube mr-1"></i> کامپوننت های پایه <span class="badge badge-danger">9</span><i class="fas fas fa-chevron-down arrow"></i>
-            </a>
-            <div class="side-item-container hide animated">
-            <li class="side-item">
-                <a href="./alert.html" class="fnt-mxs"><i class="fas fa-angle-right mr-2"></i>alert</a>
-            </li>
-            <li class="side-item"><a href="./badge.html" class="fnt-mxs"><i class="fas fa-angle-right mr-2"></i>Badge</a></li>
-            <li class="side-item"><a href="./breadcrumb.html" class="fnt-mxs"><i class="fas fa-angle-right mr-2"></i>Breadcrumb</a></li>
-            <li class="side-item"><a href="./button.html" class="fnt-mxs"><i class="fas fa-angle-right mr-2"></i>Button</a></li>
-            <li class="side-item"><a href="./card.html" class="fnt-mxs"><i class="fas fa-angle-right mr-2"></i>Card</a></li>
-            <li class="side-item"><a href="./collapse.html" class="fnt-mxs"><i class="fas fa-angle-right mr-2"></i>Collapse</a></li>
-            <li class="side-item"><a href="./Input.html" class="fnt-mxs"><i class="fas fa-angle-right mr-2"></i>Input</a></li>
-            <li class="side-item"><a href="./jumborton.html" class="fnt-mxs"><i class="fas fa-angle-right mr-2"></i>Jumborton</a></li>
-            <li class="side-item"><a href="./pagination.html" class="fnt-mxs"><i class="fas fa-angle-right mr-2"></i>Pagination</a></li>
-            <li class="side-item"><a href="./progress.html" class="fnt-mxs"><i class="fas fa-angle-right mr-2"></i>Progress</a></li>
-    </div>
-    </ul>
-    <ul class="side a-collapse short">
-        <a class="ul-text  fnt-mxs">
-            <i class="fas fa-layer-group mr-1"></i>کامپوننت های اضافی
-            <!-- <span class="badge badge-warning">6</span> -->
-            <i class="fas fas fa-chevron-down arrow"></i>
-        </a>
-        <div class="side-item-container hide animated">
-        <li class="side-item"><a href="./modal.html" class="fnt-mxs"><i class="fas fa-angle-right mr-2"></i>Modal</a></li>
-        <li class="side-item"><a href="./toast.html" class="fnt-mxs"><i class="fas fa-angle-right mr-2"></i>Toast</a></li>
-        <li class="side-item"><a href="./widget.html" class="fnt-mxs"><i class="fas fa-angle-right mr-2"></i>Widget</a></li>
+		                </li>
+		                <li class="side-item"><a href="./Login.html" class="fnt-mxs"><i class="fas fa-angle-right mr-2"></i>صفحه ورود</a></li>
+		                <li class="side-item"><a href="./glogin.html"><i class="fas fa-angle-right mr-2"></i>صفحه ورود رنگی</a></li>
 
-        </div>
-    </ul>
+	                </div>
+                </ul>
 
-    <p class="side-comment  fnt-mxs">پشتیبانی</p>
-    <li class="side a-collapse short ">
-        <a href="https://github.com/MajidAlinejad/Nozha-rtl-Dashboard" class="side-item  fnt-mxs "><i class=" fab fa-github mr-1"></i>GitHub</a>
-    </li>
-    <li class="side a-collapse short ">
-        <a href="https://github.com/MajidAlinejad/Nozha-rtl-Dashboard" class="side-item  fnt-mxs "><i class=" far fa-question-circle mr-1"></i>گزارش باگ</a>
-    </li>
-    <li class="side a-collapse short ">
-        <a href="https://github.com/MajidAlinejad/Nozha-rtl-Dashboard" class="side-item  fnt-mxs "><i class=" far fa-life-ring mr-1"></i>حل مشکل</a>
-    </li>
-
-    <p class="side-comment  fnt-mxs">اهدا</p>
-    <li class="side a-collapse short pb-5">
-        <a href="https://donateon.ir/alinejad.mj" class="side-item  fnt-mxs "><i class=" fas fa-coffee mr-1"></i>کمک به توسعه دهنده </a>
-    </li>
-
+                
+            
+            
+           
+         
+ 
 
     </div>
 
     </div>
     <main class="bmd-layout-content">
         <div class="container-fluid d-flex align-items-center justify-content-center">
-  
- 
- @RenderBody()
+
+
+                @RenderBody()
 
 
 
@@ -241,16 +207,12 @@
     </main>
     </div>
 
- 
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-    <!-- DataTables -->
-    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
+
 
     <script src="~/js/vendor/modernizr.js"></script>
-   
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script>
         window.jQuery || document.write('<script src="/js/vendor/jquery-3.2.1.min.js"><\/script>')
     </script>
@@ -261,7 +223,7 @@
     <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js"
             integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous">
     </script>
-    
+
     <script src="~/js/persianumber.min.js"></script>
     <script>
         $(document).ready(function () {
@@ -284,6 +246,6 @@
     <script src="~/js/site.js"></script>
     @await RenderSectionAsync("Scripts", required: false)
 
-    </body>
+</body>
 
 </html>

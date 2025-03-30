@@ -1,5 +1,62 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+﻿@model List<Category>
+<div class="col-xs-1 col-sm-1 col-md-8 col-lg-8 p-2">
+	<div class="row">
+		<div class="page-header breadcrumb-header p-3 mr-2 ml-2 m-2">
+			<div class="row align-items-end ">
+				<div class="col-lg-8">
+					<div class="page-header-title text-left-rtl">
+						<div class="d-inline"> 
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4">
+					<ol class="breadcrumb float-sm-right">
+						<li class="breadcrumb-item "><a href="#"><i class="fas fa-home"></i></a></li>
+						<li class="breadcrumb-item active">دسته بندی ها  </li>
+						 
+					</ol>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="card shade h-100">
+		<div class="card-body">
+
+			<div class="d-flex justify-content-around">
+				<h5 class="card-title">لیست دسته بندی ها  </h5>
+				<a asp-area="Admin" asp-controller="Category" asp-action="Create" class="btn o-primary  text-center">اضافه کردن</a>
+			</div>
+			<hr>
+			<table class="table table-striped m-1" style="overflow: auto; max-height: 100px;">
+				<thead>
+				<tr>
+					<th>شناسه</th>
+					<th>نام دسته‌بندی</th>
+					<th>والد</th>
+					<th>توضیحات</th>
+
+					<th>عملیات</th>
+				</tr>
+				</thead>
+				<tbody>
+				@foreach (var category in Model)
+				{
+					<tr>
+						<td>@category.CategoryId</td>
+						<td>@category.CategoryName</td>
+						<td>	@if (@category.ParentCategory != null) { <p>@category.ParentCategory.CategoryName</p> }
+							    else { <p>دسته‌بندی موجود نیست</p> }</td>
+							<td>@category.CategoryName</td>
+
+						<td>
+							<a class="btn outlined   outlined c-warning  ">ویرایش</a>
+							<a class="btn outlined  outlined c-danger    ">حذف</a>
+						</td>
+					</tr>
+				}
+				</tbody>
+			</table>
+		</div>
+
+	</div>
+</div>

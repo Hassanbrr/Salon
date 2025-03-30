@@ -1,0 +1,84 @@
+﻿  @model Domain.Models.ViewModels.CategoryViewModel
+  
+<div class="container-fluid ">
+
+	<!-- content -->
+
+	<div class="row">
+		<div class="page-header breadcrumb-header p-3 mr-2 ml-2 m-2">
+			<div class="row align-items-end ">
+				<div class="col-lg-8">
+					<div class="page-header-title text-left-rtl">
+						<div class="d-inline">
+							<h3 class="lite-text ">ساخت خدمات</h3>
+
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4">
+					<ol class="breadcrumb float-sm-right">
+						<li class="breadcrumb-item "><a href="#"><i class="fas fa-home"></i></a></li>
+						<li class="breadcrumb-item "><a asp-area="Admin" asp-controller="Category" asp-action="Index">دسته بندی </a></li>
+						<li class="breadcrumb-item active">ساخت دسته بندی</li>
+					</ol>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+	<form method="post" action="" class="d-flex" enctype="multipart/form-data">
+  
+		<div class="col-lg-10 col-sm-10 ">
+
+			<div class="mb-3 col-lg-10 col-md-8 col-sm-8">
+				<label asp-for="CategoryName" class=""> </label>
+				<input asp-for="CategoryName" type="text" class="form-control " />
+				<span asp-validation-for="CategoryName" class="text-danger"></span>
+
+			</div>
+			 
+			<div class="mb-3 col-lg-10 col-md-8 col-sm-8">
+			  <label asp-for="ParentCategoryId">دسته‌بندی والد</label>
+        <select asp-for="ParentCategoryId" class="form-control" asp-items="Model.ParentCategories">
+            <option value="">بدون دسته‌بندی والد</option>
+        </select>
+
+			</div>
+			<div class="mb-3 col-lg-10 col-md-8 col-sm-8">
+				<label asp-for="Slug"> </label>
+				<input asp-for="Slug" type="text" class="form-control " placeholder="Jane Doe">
+				<span asp-validation-for="Slug" class="text-danger"></span>
+			</div>
+
+		 
+
+			<div class="mb-3 col-lg-10 col-md-8 col-sm-8 ">
+				<label asp-for="Description" for="exampleFormControlTextarea1"></label>
+				<textarea asp-for="Description" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+				<span asp-validation-for="Description" class="text-info"></span>
+
+			</div>
+			<div class="row">
+				<div class="col-4"> 
+				 
+						<button type="submit" class="btn outlined o-primary form-control  text-center">
+							اضافه کردن
+						</button>
+				 
+				</div>
+				<div class="col-4 ">
+					<a asp-area="Admin" asp-controller="Category" asp-action="Index" class="btn outlined o-danger form-control text-center">
+						برگشت
+					</a>
+				</div>
+			</div>
+		</div>
+
+
+	</form>
+	<!-- end of form -->
+</div>
