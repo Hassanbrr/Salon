@@ -4,6 +4,7 @@ using Domain.Models.ViewModels;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
 using static System.Net.Mime.MediaTypeNames;
 
 namespace Salon.Areas.Admin.Controllers
@@ -116,5 +117,21 @@ namespace Salon.Areas.Admin.Controllers
                 return View(serviceList);
             }
         }
+
+ 
+        public IActionResult Delete(int id)
+        {
+            var service = _unitOfWork.Service.FindByCondition(u=>id == u.ServiceId).FirstOrDefault();
+            if (service == null)
+            {
+                return NotFound();
+            }
+
+            _unitOfWork.Service.Delete(service);
+            _unitOfWork.SaveChangesAsync();
+
+            return RedirectToAction("Index");
+        }
+
     }
 }

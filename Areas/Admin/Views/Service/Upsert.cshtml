@@ -30,6 +30,8 @@
 
 
 	<form method="post" action="" class="d-flex" enctype="multipart/form-data">
+		<input asp-for="Services.ServiceId" hidden />
+		<input asp-for="Services.ImageUrl" hidden />
 		<div class="col-lg-10 col-sm-10 ">
 
 			<div class="mb-3 col-lg-10 col-md-8 col-sm-8">
@@ -66,20 +68,33 @@
 				<label asp-for="Services.ImageUrl" class="p-0"></label>
 				<input type="file" name="file" class="form-control" />
 				<span asp-validation-for="Services.ImageUrl" class="text-info"></span>
+				<div clas="col-2 ">
+					<img alt="Profile Image" src="@Model.Services.ImageUrl"   width="200px" height="200px"/>
+				</div>
 
 			</div>
 
 			<div class="mb-3 col-lg-10 col-md-8 col-sm-8 ">
-				<label asp-for="Services.Description" for="exampleFormControlTextarea1">Example textarea</label>
+				<label asp-for="Services.Description" for="exampleFormControlTextarea1"></label>
 				<textarea asp-for="Services.Description" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
 				<span asp-validation-for="Services.Description" class="text-info"></span>
 
 			</div>
 			<div class="row">
 				<div class="col-4">
-					<button   type="submit" class="btn outlined o-primary form-control  text-center">
-						اضافه کردن
-					</button>
+					@if (Model.Services.ServiceId != 0)
+					{
+					
+						<button type="submit" class="btn outlined o-warning form-control  text-center">
+							ویرایش
+						</button>
+					}
+					else
+					{
+						<button type="submit" class="btn outlined o-primary form-control  text-center">
+							اضافه کردن
+						</button>
+					}
 				</div>
 				<div class="col-4 ">
 					<a asp-area="Admin" asp-controller="Service" asp-action="Index" class="btn outlined o-danger form-control text-center">
@@ -88,9 +103,7 @@
 				</div>
 			</div>
 		</div>
-		<div clas="col-2">
-			<img alt="Profile Image" src="@Model.Services.ImageUrl"     />
-		</div>
+		
 
 	</form>
 	<!-- end of form -->
