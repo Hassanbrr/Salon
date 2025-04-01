@@ -28,7 +28,7 @@ namespace Salon.Areas.Admin.Controllers
         }
 
 
-        public IActionResult Upsert(int? id)
+        public IActionResult Upsert(int? id,IFormFile? file)
         {
             ServiceVm serviceList = new()
             {

@@ -17,14 +17,14 @@ namespace Salon.Areas.Admin.Controllers
         {
             _unitOfWork = unitOfWork;
         }
-        public async Task<IActionResult> Index()
+        public   IActionResult Index()
         {
-            var categoriesList = await _unitOfWork.Category.FindAll(includeProperties:"ParentCategory").ToListAsync();
+            var categoriesList =   _unitOfWork.Category.FindAll(includeProperties:"ParentCategory").ToList();
 
             return View(categoriesList);
         }
         [HttpGet]
-        public async Task<IActionResult> Create(int? id)
+        public IActionResult Create(int? id)
         {
            
          
